@@ -4,10 +4,6 @@
  */
 package com.mycompany.aula_13.Model;
 
-/**
- *
- * @author SAMSUNG
- */
 public class Usuario {
 
     private String nome;

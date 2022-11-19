@@ -9,7 +9,7 @@ package com.mycompany.aula_13;
  *
  * @author SAMSUNG
  */
-public class Aula_13 {
+public class App {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
