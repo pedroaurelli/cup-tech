@@ -34,28 +34,27 @@ public class Curso_DAO {
     }
 
     public ArrayList<Curso> listar() {
-//        ArrayList<Curso> lista = new ArrayList<>();
-//        String sql = "SELECT * FROM tb_curso";
-//        try ( Connection conn = ConexaoDB.obterConexao();  
-//                PreparedStatement ps = conn.prepareStatement(sql); 
-//                ResultSet rs = ps.executeQuery()) {
-//
-//            rs.beforeFirst();
-//            int contador = 0;
-//
-//            while (rs.next()) {
-//                int id = rs.getInt("id");
-//                String nome = rs.getString("nome");
-//                String tipo = rs.getString("tipo");
-//                Curso curso = new Curso(id, nome, tipo);
-//                lista.add(curso);
-//            }
-//            return lista;
-//        } catch (Exception ex) {
-//            Logger.getLogger(Curso_DAO.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//
-//        return null;
+        ArrayList<Curso> lista = new ArrayList<>();
+        String sql = "SELECT * FROM tb_curso";
+        try ( Connection conn = ConexaoDB.obterConexao();  
+                PreparedStatement ps = conn.prepareStatement(sql); 
+                ResultSet rs = ps.executeQuery()) {
 
+            rs.beforeFirst();
+            int contador = 0;
+
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String nome = rs.getString("nome");
+                String tipo = rs.getString("tipo");
+                Curso curso = new Curso(id, nome, tipo);
+                lista.add(curso);
+            }
+            return lista;
+        } catch (Exception ex) {
+            Logger.getLogger(Curso_DAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return null;
     }
 }

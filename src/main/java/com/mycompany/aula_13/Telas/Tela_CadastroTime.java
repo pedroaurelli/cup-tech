@@ -100,17 +100,13 @@ public class Tela_CadastroTime extends javax.swing.JFrame {
     String time = inputNomeTime.getText();
     String sigla = time.substring(0, 3).toUpperCase();
     
-    JOptionPane.showMessageDialog(null, sigla);
-    
     try {
       Time novoTime = new Time (time, sigla);
       Time_DAO timeDao = new Time_DAO();
+              
+      timeDao.cadastrar(novoTime);
       
-      if (timeDao.existe(novoTime)) {
-        JOptionPane.showMessageDialog(null, "Time cadastrado com sucesso!");
-      } else {
-        JOptionPane.showMessageDialog(null, "Time ja existe");
-      }
+      JOptionPane.showMessageDialog(null, "Time cadastrado com sucesso!");
     } catch (Exception e) {
       JOptionPane.showMessageDialog(null, "Problemas técnicos. Tente novamente mais tarde");
     }
