@@ -35,6 +35,7 @@ public class Tela_Menu extends javax.swing.JFrame {
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+    jPanel1.setBackground(new java.awt.Color(147, 157, 186));
     jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Cup Tech - Admin "));
 
     btnListarTimes.setText("Listar times");
@@ -51,7 +52,7 @@ public class Tela_Menu extends javax.swing.JFrame {
       }
     });
 
-    btnSimular.setText("Simular");
+    btnSimular.setText("Simular Copa");
     btnSimular.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         btnSimularActionPerformed(evt);
