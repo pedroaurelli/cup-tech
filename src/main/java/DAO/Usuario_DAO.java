@@ -26,4 +26,14 @@ public class Usuario_DAO {
             }
         }
     }
+    
+    public boolean isAdmin(Usuario usuario) throws Exception {
+      String sql = "SELECT is_admin FROM usuario WHERE nome = ?";
+      try ( Connection conn = ConexaoDB.obterConexao();  PreparedStatement ps = conn.prepareStatement(sql)) {
+          ps.setString(1, usuario.getNome());
+          try ( ResultSet rs = ps.executeQuery()) {
+              return rs.next();
+          }
+      }
+    }
 }

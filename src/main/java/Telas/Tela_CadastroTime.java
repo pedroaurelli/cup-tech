@@ -39,7 +39,7 @@ public class Tela_CadastroTime extends javax.swing.JFrame {
     setTitle("Cup-Tech");
     setBackground(new java.awt.Color(147, 157, 186));
 
-    jPanel1.setBackground(new java.awt.Color(147, 157, 186));
+    jPanel1.setBackground(new java.awt.Color(102, 102, 102));
 
     inputNomeTime.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome do time"));
     inputNomeTime.addActionListener(new java.awt.event.ActionListener() {

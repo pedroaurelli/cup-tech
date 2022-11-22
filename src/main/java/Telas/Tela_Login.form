@@ -4,7 +4,7 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-      <Color blue="ba" green="9d" red="93" type="rgb"/>
+      <Color blue="66" green="66" red="66" type="rgb"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -64,7 +64,7 @@
               <Component id="pf_senha" min="-2" pref="30" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Component id="btn_login" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="50" max="32767" attributes="0"/>
+              <EmptySpace pref="75" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

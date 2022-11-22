@@ -31,11 +31,11 @@ public class Tela_Menu extends javax.swing.JFrame {
     jPanel1 = new javax.swing.JPanel();
     btnListarTimes = new javax.swing.JButton();
     btnCadastroTime = new javax.swing.JButton();
-    btnSimular = new javax.swing.JButton();
+    btnGrupos = new javax.swing.JButton();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-    jPanel1.setBackground(new java.awt.Color(147, 157, 186));
+    jPanel1.setBackground(new java.awt.Color(102, 102, 102));
     jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Cup Tech - Admin "));
 
     btnListarTimes.setText("Listar times");
@@ -52,10 +52,10 @@ public class Tela_Menu extends javax.swing.JFrame {
       }
     });
 
-    btnSimular.setText("Cadastrar grupos");
-    btnSimular.addActionListener(new java.awt.event.ActionListener() {
+    btnGrupos.setText("Cadastrar grupos");
+    btnGrupos.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        btnSimularActionPerformed(evt);
+        btnGruposActionPerformed(evt);
       }
     });
 
@@ -70,7 +70,7 @@ public class Tela_Menu extends javax.swing.JFrame {
       .addGroup(jPanel1Layout.createSequentialGroup()
         .addContainerGap()
         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-          .addComponent(btnSimular, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+          .addComponent(btnGrupos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
           .addComponent(btnListarTimes, javax.swing.GroupLayout.DEFAULT_SIZE, 377, Short.MAX_VALUE))
         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
@@ -78,7 +78,7 @@ public class Tela_Menu extends javax.swing.JFrame {
       jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jPanel1Layout.createSequentialGroup()
         .addGap(23, 23, 23)
-        .addComponent(btnSimular, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
+        .addComponent(btnGrupos, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
         .addGap(18, 18, 18)
         .addComponent(btnListarTimes, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(18, 18, 18)
@@ -113,15 +113,18 @@ public class Tela_Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnListarTimesActionPerformed
 
     private void btnCadastroTimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastroTimeActionPerformed
-        // TODO add your handling code here:
-        Tela_CadastroTime cadastro = new Tela_CadastroTime();
-        cadastro.setVisible(true);
-        this.dispose();
+      // TODO add your handling code here:
+      Tela_CadastroTime cadastro = new Tela_CadastroTime();
+      cadastro.setVisible(true);
+      this.dispose();
     }//GEN-LAST:event_btnCadastroTimeActionPerformed
 
-  private void btnSimularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimularActionPerformed
+  private void btnGruposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGruposActionPerformed
     // TODO add your handling code here:
-  }//GEN-LAST:event_btnSimularActionPerformed
+    TelaGrupos grupos = new TelaGrupos();
+    grupos.setVisible(true);
+    this.dispose();
+  }//GEN-LAST:event_btnGruposActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,8 +163,8 @@ public class Tela_Menu extends javax.swing.JFrame {
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private static javax.swing.JButton btnCadastroTime;
+  private javax.swing.JButton btnGrupos;
   private static javax.swing.JButton btnListarTimes;
-  private javax.swing.JButton btnSimular;
   private javax.swing.JPanel jPanel1;
   // End of variables declaration//GEN-END:variables
 }

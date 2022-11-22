@@ -41,7 +41,7 @@ public class Tela_Login extends javax.swing.JFrame {
     jLabel3 = new javax.swing.JLabel();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-    setBackground(new java.awt.Color(147, 157, 186));
+    setBackground(new java.awt.Color(102, 102, 102));
 
     tf_login.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,7 +99,7 @@ public class Tela_Login extends javax.swing.JFrame {
         .addComponent(pf_senha, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(33, 33, 33)
         .addComponent(btn_login)
-        .addContainerGap(50, Short.MAX_VALUE))
+        .addContainerGap(75, Short.MAX_VALUE))
     );
 
     pack();
