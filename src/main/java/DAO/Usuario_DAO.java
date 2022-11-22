@@ -10,10 +10,7 @@ import App.ConexaoDB;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-/**
- *
- * @author SAMSUNG
- */
+
 public class Usuario_DAO {
 
     public boolean existe(Usuario usuario) throws Exception {

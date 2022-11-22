@@ -123,7 +123,7 @@ public class Tela_CadastroTime extends javax.swing.JFrame {
       
       JOptionPane.showMessageDialog(null, "Time cadastrado com sucesso!");
     } catch (Exception e) {
-      JOptionPane.showMessageDialog(null, "Erro. Tente novamente mais tarde");
+      JOptionPane.showMessageDialog(null, "Erro ao cadastrar");
     }
   }//GEN-LAST:event_btnCadastrarActionPerformed
 

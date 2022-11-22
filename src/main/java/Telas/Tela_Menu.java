@@ -4,10 +4,6 @@
  */
 package Telas;
 
-/**
- *
- * @author SAMSUNG
- */
 public class Tela_Menu extends javax.swing.JFrame {
 
     /**
@@ -32,6 +28,7 @@ public class Tela_Menu extends javax.swing.JFrame {
     btnListarTimes = new javax.swing.JButton();
     btnCadastroTime = new javax.swing.JButton();
     btnGrupos = new javax.swing.JButton();
+    jButton1 = new javax.swing.JButton();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,12 +49,14 @@ public class Tela_Menu extends javax.swing.JFrame {
       }
     });
 
-    btnGrupos.setText("Cadastrar grupos");
+    btnGrupos.setText("Grupos");
     btnGrupos.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         btnGruposActionPerformed(evt);
       }
     });
+
+    jButton1.setText("Simular Copa!");
 
     javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
     jPanel1.setLayout(jPanel1Layout);
@@ -71,19 +70,22 @@ public class Tela_Menu extends javax.swing.JFrame {
         .addContainerGap()
         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
           .addComponent(btnGrupos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-          .addComponent(btnListarTimes, javax.swing.GroupLayout.DEFAULT_SIZE, 377, Short.MAX_VALUE))
+          .addComponent(btnListarTimes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+          .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 377, Short.MAX_VALUE))
         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
     jPanel1Layout.setVerticalGroup(
       jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jPanel1Layout.createSequentialGroup()
-        .addGap(23, 23, 23)
-        .addComponent(btnGrupos, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
+        .addGap(31, 31, 31)
+        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addGap(18, 18, 18)
+        .addComponent(btnGrupos, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(18, 18, 18)
         .addComponent(btnListarTimes, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(18, 18, 18)
         .addComponent(btnCadastroTime, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addGap(35, 35, 35))
+        .addContainerGap(37, Short.MAX_VALUE))
     );
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -92,15 +94,15 @@ public class Tela_Menu extends javax.swing.JFrame {
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
         .addGap(23, 23, 23)
-        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(27, Short.MAX_VALUE))
+        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap(29, Short.MAX_VALUE))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
         .addGap(20, 20, 20)
         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(24, Short.MAX_VALUE))
+        .addContainerGap(37, Short.MAX_VALUE))
     );
 
     jPanel1.getAccessibleContext().setAccessibleName("Menu cup tech");
@@ -165,6 +167,7 @@ public class Tela_Menu extends javax.swing.JFrame {
   private static javax.swing.JButton btnCadastroTime;
   private javax.swing.JButton btnGrupos;
   private static javax.swing.JButton btnListarTimes;
+  private javax.swing.JButton jButton1;
   private javax.swing.JPanel jPanel1;
   // End of variables declaration//GEN-END:variables
 }

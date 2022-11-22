@@ -5,10 +5,6 @@
 
 package App;
 
-/**
- *
- * @author SAMSUNG
- */
 public class App {
 
     public static void main(String[] args) {

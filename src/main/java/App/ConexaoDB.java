@@ -7,27 +7,9 @@ package App;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-/**
- *
- * @author SAMSUNG
- */
-public class ConexaoDB {
 
-//    private static String host = "localhost";
-//    private static String porta = "3306";
-//    private static String db = "Cursos_db";
-//    private static String usuario = "root";
-//    private static String senha = "210511";
-//
-//    public static Connection obterConexao() throws Exception {
-//        String url = String.format(
-//                "jdbc:mysql://%s:%s/%s?useTimezone=true&serverTimezone=UTC",
-//                host,
-//                porta,
-//                db
-//        );
-//        return DriverManager.getConnection(url, usuario, senha);
-//    }
+public class ConexaoDB {
+  
     private static String host = "ec2-54-163-34-107.compute-1.amazonaws.com";
     private static String porta = "5432";
     private static String db = "d6ppvf29o2mfuq";

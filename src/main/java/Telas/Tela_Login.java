@@ -10,10 +10,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author SAMSUNG
- */
 public class Tela_Login extends javax.swing.JFrame {
 
     /**
@@ -126,10 +122,10 @@ public class Tela_Login extends javax.swing.JFrame {
                 this.dispose();
                 
             } else {
-                JOptionPane.showMessageDialog(null, "Usuário ou Senha inválido");
+                JOptionPane.showMessageDialog(null, "Usuário ou Senha inválidos");
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Problemas técnicos. Tente novamente mais tarde");
+            JOptionPane.showMessageDialog(null, "Erro. Tente novamente mais tarde");
             e.printStackTrace();
         }
     }//GEN-LAST:event_btn_loginActionPerformed
