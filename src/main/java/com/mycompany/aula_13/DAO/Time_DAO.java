@@ -28,6 +28,8 @@ public class Time_DAO {
   public void cadastrar (Time time) throws Exception {
     String sql = "INSERT INTO time (nome, sigla) VALUES ( ? , ? )";
     
+    System.out.println(time.getNome());
+    
     try ( Connection conn = ConexaoDB.obterConexao();  PreparedStatement ps = conn.prepareStatement(sql)) {
       ps.setString(1, time.getNome());
       ps.setString(2, time.getSigla());

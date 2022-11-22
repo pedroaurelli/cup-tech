@@ -41,6 +41,7 @@ public class Tela_Login extends javax.swing.JFrame {
     jLabel3 = new javax.swing.JLabel();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+    setBackground(new java.awt.Color(147, 157, 186));
 
     tf_login.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {

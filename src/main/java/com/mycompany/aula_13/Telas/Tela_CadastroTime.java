@@ -36,6 +36,10 @@ public class Tela_CadastroTime extends javax.swing.JFrame {
     btnVoltar = new javax.swing.JButton();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+    setTitle("Cup-Tech");
+    setBackground(new java.awt.Color(147, 157, 186));
+
+    jPanel1.setBackground(new java.awt.Color(147, 157, 186));
 
     inputNomeTime.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome do time"));
     inputNomeTime.addActionListener(new java.awt.event.ActionListener() {
@@ -89,14 +93,14 @@ public class Tela_CadastroTime extends javax.swing.JFrame {
       .addGroup(layout.createSequentialGroup()
         .addGap(23, 23, 23)
         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(25, Short.MAX_VALUE))
+        .addContainerGap(22, Short.MAX_VALUE))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
         .addGap(20, 20, 20)
         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(7, Short.MAX_VALUE))
+        .addContainerGap(26, Short.MAX_VALUE))
     );
 
     pack();
@@ -119,7 +123,7 @@ public class Tela_CadastroTime extends javax.swing.JFrame {
       
       JOptionPane.showMessageDialog(null, "Time cadastrado com sucesso!");
     } catch (Exception e) {
-      JOptionPane.showMessageDialog(null, "Problemas técnicos. Tente novamente mais tarde");
+      JOptionPane.showMessageDialog(null, "Erro. Tente novamente mais tarde");
     }
   }//GEN-LAST:event_btnCadastrarActionPerformed
 
