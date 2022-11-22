@@ -110,8 +110,6 @@ public class Tela_Login extends javax.swing.JFrame {
         String login = tf_login.getText();
         String senha = new String(pf_senha.getPassword());
 
-        Usuario usu = new Usuario(login, senha);
-
         try {
             Usuario usuario = new Usuario(login, senha);
             Usuario_DAO dao = new Usuario_DAO();

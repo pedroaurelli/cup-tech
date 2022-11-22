@@ -82,8 +82,8 @@ public class Tela_CadastroTime extends javax.swing.JFrame {
         .addGap(33, 33, 33)
         .addComponent(inputNomeTime, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(18, 18, 18)
-        .addComponent(btnCadastrar)
-        .addContainerGap(95, Short.MAX_VALUE))
+        .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap(81, Short.MAX_VALUE))
     );
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
