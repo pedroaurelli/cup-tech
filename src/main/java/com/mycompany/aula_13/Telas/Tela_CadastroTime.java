@@ -33,6 +33,7 @@ public class Tela_CadastroTime extends javax.swing.JFrame {
     jPanel1 = new javax.swing.JPanel();
     inputNomeTime = new javax.swing.JTextField();
     btnCadastrar = new javax.swing.JButton();
+    btnVoltar = new javax.swing.JButton();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,25 +51,35 @@ public class Tela_CadastroTime extends javax.swing.JFrame {
       }
     });
 
+    btnVoltar.setText("Voltar");
+    btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnVoltarActionPerformed(evt);
+      }
+    });
+
     javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
     jPanel1.setLayout(jPanel1Layout);
     jPanel1Layout.setHorizontalGroup(
       jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jPanel1Layout.createSequentialGroup()
         .addGap(27, 27, 27)
-        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(inputNomeTime, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(btnCadastrar))
+          .addComponent(btnVoltar))
         .addContainerGap(31, Short.MAX_VALUE))
     );
     jPanel1Layout.setVerticalGroup(
       jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jPanel1Layout.createSequentialGroup()
-        .addGap(57, 57, 57)
-        .addComponent(inputNomeTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 124, Short.MAX_VALUE)
+        .addGap(16, 16, 16)
+        .addComponent(btnVoltar)
+        .addGap(33, 33, 33)
+        .addComponent(inputNomeTime, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addGap(18, 18, 18)
         .addComponent(btnCadastrar)
-        .addGap(30, 30, 30))
+        .addContainerGap(95, Short.MAX_VALUE))
     );
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -112,6 +123,13 @@ public class Tela_CadastroTime extends javax.swing.JFrame {
     }
   }//GEN-LAST:event_btnCadastrarActionPerformed
 
+  private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+    // TODO add your handling code here:
+    Tela_Menu menu = new Tela_Menu();
+    menu.setVisible(true);
+    this.dispose();
+  }//GEN-LAST:event_btnVoltarActionPerformed
+
   /**
    * @param args the command line arguments
    */
@@ -153,6 +171,7 @@ public class Tela_CadastroTime extends javax.swing.JFrame {
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JButton btnCadastrar;
+  private javax.swing.JButton btnVoltar;
   private javax.swing.JTextField inputNomeTime;
   private javax.swing.JPanel jPanel1;
   // End of variables declaration//GEN-END:variables

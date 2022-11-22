@@ -110,13 +110,13 @@ public class Tela_Menu extends javax.swing.JFrame {
 
     private void btnListarTimesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarTimesActionPerformed
         // TODO add your handling code here:
-        Tela_Cursos cursos = new Tela_Cursos();
-        cursos.setVisible(true);
-        this.dispose();
     }//GEN-LAST:event_btnListarTimesActionPerformed
 
     private void btnCadastroTimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastroTimeActionPerformed
         // TODO add your handling code here:
+        Tela_CadastroTime cadastro = new Tela_CadastroTime();
+        cadastro.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnCadastroTimeActionPerformed
 
   private void btnSimularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimularActionPerformed
