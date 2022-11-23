@@ -5,7 +5,7 @@
 package DAO;
 
 import App.ConexaoDB;
-import Model.Time;
+import Model.Grupo;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,13 +15,13 @@ import java.sql.ResultSet;
  * @author zpeed
  */
 public class Grupos_DAO {
-  public boolean existe(Time time) throws Exception {
-    String sql = "SELECT * FROM grupos";
+  public void existe(Grupo grupo) throws Exception {
+    String sql = "INSERT INTO grupos (id_time, grupo) VALUES (?, ?)";
     
     try ( Connection conn = ConexaoDB.obterConexao();  PreparedStatement ps = conn.prepareStatement(sql)) {
-      ps.setString(1, time.getNome());
+      ps.setString(1, grupo.getNomeGrupo());
       try ( ResultSet rs = ps.executeQuery()) {
-        return rs.next();
+        rs.next();
       }
     }
   }

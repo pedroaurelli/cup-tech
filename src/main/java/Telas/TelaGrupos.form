@@ -51,7 +51,7 @@
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="jPanel4" max="32767" attributes="0"/>
                   <Component id="jPanel8" max="32767" attributes="0"/>
-                  <Component id="simularGrupos" alignment="1" min="-2" pref="155" max="-2" attributes="0"/>
+                  <Component id="cadastrarGrupo" alignment="1" min="-2" pref="155" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="16" max="32767" attributes="0"/>
           </Group>
@@ -78,7 +78,7 @@
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="btnVoltar" min="-2" pref="31" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Component id="simularGrupos" max="32767" attributes="0"/>
+                      <Component id="cadastrarGrupo" max="32767" attributes="0"/>
                       <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -400,12 +400,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVoltarActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="simularGrupos">
+    <Component class="javax.swing.JButton" name="cadastrarGrupo">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Simular grupos"/>
+        <Property name="text" type="java.lang.String" value="Cadastrar grupo"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="simularGruposActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cadastrarGrupoActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
