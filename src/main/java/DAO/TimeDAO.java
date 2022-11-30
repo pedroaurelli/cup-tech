@@ -28,14 +28,12 @@ public class TimeDAO {
   }
   
   public void cadastrar (Time time) throws Exception {
-    if (!this.estaCheio()) {
-      String sql = "INSERT INTO time (nome, sigla) VALUES ( ? , ? )";
+    String sql = "INSERT INTO time (nome, sigla) VALUES ( ? , ? )";
 
-      try ( Connection conn = ConexaoDB.obterConexao();  PreparedStatement ps = conn.prepareStatement(sql)) {
-        ps.setString(1, time.getNome());
-        ps.setString(2, time.getSigla());
-        ps.execute();
-      }
+    try ( Connection conn = ConexaoDB.obterConexao();  PreparedStatement ps = conn.prepareStatement(sql)) {
+      ps.setString(1, time.getNome());
+      ps.setString(2, time.getSigla());
+      ps.execute();
     }
   }
   
@@ -70,7 +68,7 @@ public class TimeDAO {
       
       Integer qntdTimes = result.getInt("count");
       
-      return qntdTimes >= 32;
+      return qntdTimes <= 31;
     } catch (Exception e) {
       e.printStackTrace();
       return false;

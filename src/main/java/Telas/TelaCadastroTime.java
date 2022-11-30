@@ -119,9 +119,18 @@ public class TelaCadastroTime extends javax.swing.JFrame {
       Time novoTime = new Time (time, sigla, 0);
       TimeDAO timeDao = new TimeDAO();
       
-      timeDao.cadastrar(novoTime);
-      JOptionPane.showMessageDialog(null, "Time cadastrado com sucesso!");
-      this.dispose();
+      boolean isCheio = timeDao.estaCheio();
+              
+      timeDao.listar().size();
+      
+      if (isCheio) {
+        timeDao.cadastrar(novoTime);
+        JOptionPane.showMessageDialog(null, "Time cadastrado com sucesso!");
+        this.dispose();
+      } else {
+        JOptionPane.showMessageDialog(null, "Limite de cadastro");
+        this.dispose();
+      }
               
     } catch (Exception e) {
       JOptionPane.showMessageDialog(null, "Erro ao cadastrar");

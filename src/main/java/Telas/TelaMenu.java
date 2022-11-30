@@ -4,6 +4,11 @@
  */
 package Telas;
 
+import DAO.TimeDAO;
+import Model.Time;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author zpeed
@@ -33,8 +38,18 @@ public class TelaMenu extends javax.swing.JFrame {
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
     btnListarTimes.setText("Listar times");
+    btnListarTimes.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnListarTimesActionPerformed(evt);
+      }
+    });
 
     btnVerResultado.setText("Ver resultado");
+    btnVerResultado.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnVerResultadoActionPerformed(evt);
+      }
+    });
 
     javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
     jPanel2.setLayout(jPanel2Layout);
@@ -72,6 +87,31 @@ public class TelaMenu extends javax.swing.JFrame {
 
     pack();
   }// </editor-fold>//GEN-END:initComponents
+
+  private void btnVerResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerResultadoActionPerformed
+    // TODO add your handling code here:
+  }//GEN-LAST:event_btnVerResultadoActionPerformed
+
+  private void btnListarTimesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarTimesActionPerformed
+    // TODO add your handling code here:
+    try {
+      TimeDAO timeDao = new TimeDAO();
+     
+      ArrayList<Time> times = timeDao.listar();
+      
+      String nomeTimes = "";
+      
+      for (int i = 0; i < times.size(); i++) {
+        String time = times.get(i).getNome();
+        nomeTimes += time + " \n";
+      }
+      
+      JOptionPane.showMessageDialog(null, nomeTimes);
+      
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }//GEN-LAST:event_btnListarTimesActionPerformed
 
   /**
    * @param args the command line arguments

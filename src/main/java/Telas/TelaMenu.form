@@ -67,11 +67,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Listar times"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnListarTimesActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnVerResultado">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ver resultado"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVerResultadoActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

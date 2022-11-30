@@ -22,6 +22,28 @@ public class TelaTimeMenu extends javax.swing.JFrame {
    */
   public TelaTimeMenu () {
     initComponents();
+    
+    TimeDAO timeDAO = new TimeDAO();
+    
+    try {
+      ArrayList<Time> times = timeDAO.listar();
+      DefaultTableModel tabela = (DefaultTableModel) tabelaDefault.getModel();
+      tabela.setRowCount(0);
+      
+      for (int i = 0; i < times.size(); i++) {
+        String [] linha = {
+          Integer.toString(times.get(i).getId()),
+          times.get(i).getNome(),
+          times.get(i).getSigla()
+        };
+        
+        tabela.addRow(linha);
+      }
+      
+      System.out.println(times.get(0));
+    } catch (Exception e){
+      e.printStackTrace();
+    }
   }
 
   /**
@@ -41,6 +63,7 @@ public class TelaTimeMenu extends javax.swing.JFrame {
     jScrollPane1 = new javax.swing.JScrollPane();
     tabelaDefault = new javax.swing.JTable();
     jButton1 = new javax.swing.JButton();
+    txtTamanhoTimes = new javax.swing.JLabel();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -113,6 +136,10 @@ public class TelaTimeMenu extends javax.swing.JFrame {
       .addGroup(jPanel1Layout.createSequentialGroup()
         .addComponent(jButton1)
         .addGap(0, 0, Short.MAX_VALUE))
+      .addGroup(jPanel1Layout.createSequentialGroup()
+        .addContainerGap()
+        .addComponent(txtTamanhoTimes, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
     jPanel1Layout.setVerticalGroup(
       jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,7 +153,9 @@ public class TelaTimeMenu extends javax.swing.JFrame {
           .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addGap(31, 31, 31)
         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addGap(34, 34, 34))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+        .addComponent(txtTamanhoTimes, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addGap(12, 12, 12))
     );
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -134,16 +163,16 @@ public class TelaTimeMenu extends javax.swing.JFrame {
     layout.setHorizontalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
-        .addGap(21, 21, 21)
+        .addGap(39, 39, 39)
         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(21, Short.MAX_VALUE))
+        .addContainerGap(28, Short.MAX_VALUE))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
         .addGap(33, 33, 33)
         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(49, Short.MAX_VALUE))
+        .addContainerGap(29, Short.MAX_VALUE))
     );
 
     pack();
@@ -155,6 +184,9 @@ public class TelaTimeMenu extends javax.swing.JFrame {
     
     try {
       ArrayList<Time> times = timeDAO.listar();
+      
+      this.txtTamanhoTimes.setText("Times cadastrados: "+ Integer.toString(times.size()));
+      
       DefaultTableModel tabela = (DefaultTableModel) tabelaDefault.getModel();
       tabela.setRowCount(0);
       
@@ -261,5 +293,6 @@ public class TelaTimeMenu extends javax.swing.JFrame {
   private javax.swing.JPanel jPanel1;
   private javax.swing.JScrollPane jScrollPane1;
   private javax.swing.JTable tabelaDefault;
+  private javax.swing.JLabel txtTamanhoTimes;
   // End of variables declaration//GEN-END:variables
 }

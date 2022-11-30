@@ -309,7 +309,23 @@ public class TelaGrupos extends javax.swing.JFrame {
       ArrayList<String> timesArr = new ArrayList();
       
       DefaultTableModel tabela = (DefaultTableModel) groupATable.getModel();
-      tabela.setRowCount(4);
+      DefaultTableModel tabelaB = (DefaultTableModel) groupBTable.getModel();
+      DefaultTableModel tabelaC = (DefaultTableModel) groupCTable.getModel();
+      DefaultTableModel tabelaD = (DefaultTableModel) groupDTable.getModel();
+      DefaultTableModel tabelaE = (DefaultTableModel) groupETable.getModel();
+      DefaultTableModel tabelaF = (DefaultTableModel) groupFTable.getModel();
+      DefaultTableModel tabelaG = (DefaultTableModel) groupGTable.getModel();
+      DefaultTableModel tabelaH = (DefaultTableModel) groupHTable.getModel();
+      
+      ArrayList<DefaultTableModel> arrTabelas = new ArrayList();
+      arrTabelas.add(tabela);
+      arrTabelas.add(tabelaB);
+      arrTabelas.add(tabelaC);
+      arrTabelas.add(tabelaD);
+      arrTabelas.add(tabelaE);
+      arrTabelas.add(tabelaF);
+      arrTabelas.add(tabelaG);
+      arrTabelas.add(tabelaH);
       
       
       for (int i = 0; i < timesResult.size(); i++) {
@@ -319,14 +335,20 @@ public class TelaGrupos extends javax.swing.JFrame {
       
       Collections.shuffle(timesArr);
       
-      for (int h = 0; h < timesResult.size(); h++) {
-        String [] linha = {
-          timesArr.get(h)
-        };
-        tabela.addRow(linha);
-      }
+      System.out.println(timesArr.size());
       
-      System.out.println(timesArr);
+      arrTabelas.forEach(item -> {
+         item.setRowCount(0);
+        
+        for (int h = 0; h < 4; h++) {
+          String timeRm = timesArr.remove(0);
+          String [] linha = {
+            timeRm
+          };
+
+          item.addRow(linha);
+        }
+      });
     }
     catch (Exception ex) {
       ex.printStackTrace();
