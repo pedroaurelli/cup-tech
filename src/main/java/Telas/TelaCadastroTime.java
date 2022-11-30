@@ -12,12 +12,12 @@ import javax.swing.JOptionPane;
  *
  * @author zpeed
  */
-public class Tela_CadastroTime extends javax.swing.JFrame {
+public class TelaCadastroTime extends javax.swing.JFrame {
 
   /**
    * Creates new form Tela_CadastroTime
    */
-  public Tela_CadastroTime () {
+  public TelaCadastroTime () {
     initComponents();
   }
 
@@ -129,7 +129,7 @@ public class Tela_CadastroTime extends javax.swing.JFrame {
 
   private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
     // TODO add your handling code here:
-    Tela_Menu menu = new Tela_Menu();
+    TelaMenuAdmin menu = new TelaMenuAdmin();
     menu.setVisible(true);
     this.dispose();
   }//GEN-LAST:event_btnVoltarActionPerformed
@@ -152,23 +152,24 @@ public class Tela_CadastroTime extends javax.swing.JFrame {
       }
     }
     catch (ClassNotFoundException ex) {
-      java.util.logging.Logger.getLogger(Tela_CadastroTime.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+      java.util.logging.Logger.getLogger(TelaCadastroTime.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
     }
     catch (InstantiationException ex) {
-      java.util.logging.Logger.getLogger(Tela_CadastroTime.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+      java.util.logging.Logger.getLogger(TelaCadastroTime.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
     }
     catch (IllegalAccessException ex) {
-      java.util.logging.Logger.getLogger(Tela_CadastroTime.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+      java.util.logging.Logger.getLogger(TelaCadastroTime.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
     }
     catch (javax.swing.UnsupportedLookAndFeelException ex) {
-      java.util.logging.Logger.getLogger(Tela_CadastroTime.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+      java.util.logging.Logger.getLogger(TelaCadastroTime.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
     }
+    //</editor-fold>
     //</editor-fold>
 
     /* Create and display the form */
     java.awt.EventQueue.invokeLater(new Runnable() {
       public void run () {
-        new Tela_CadastroTime().setVisible(true);
+        new TelaCadastroTime().setVisible(true);
       }
     });
   }

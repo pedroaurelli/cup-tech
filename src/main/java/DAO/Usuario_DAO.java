@@ -10,7 +10,6 @@ import App.ConexaoDB;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.Calendar;
 
 public class Usuario_DAO {
 
@@ -26,11 +25,17 @@ public class Usuario_DAO {
     }
     
     public boolean isAdmin(Usuario usuario) throws Exception {
-      String sql = "SELECT is_admin FROM usuario WHERE nome = ?";
+      String sql = "SELECT * FROM usuario WHERE nome = ? AND senha = ?";
       try ( Connection conn = ConexaoDB.obterConexao();  PreparedStatement ps = conn.prepareStatement(sql)) {
           ps.setString(1, usuario.getNome());
-          try ( ResultSet rs = ps.executeQuery()) {
-              return rs.next();
+          ps.setString(2, usuario.getSenha());
+          
+          try (ResultSet result = ps.executeQuery();) {
+            result.next();
+            
+            Boolean role = result.getBoolean("is_admin");
+
+            return role;
           }
       }
     }

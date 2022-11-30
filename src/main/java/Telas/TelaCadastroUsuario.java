@@ -144,7 +144,8 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
       usuarioDAO.cadastrar(usuario);
       
       JOptionPane.showMessageDialog(null, "Cadastro realizado! Faça login.");
-      Tela_Login login = new Tela_Login();
+ 
+      TelaLogin login = new TelaLogin();
       login.setVisible(true);
       this.dispose();
       

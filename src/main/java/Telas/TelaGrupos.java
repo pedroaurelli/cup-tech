@@ -295,7 +295,7 @@ public class TelaGrupos extends javax.swing.JFrame {
 
   private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
     // TODO add your handling code here:
-    Tela_Menu menu = new Tela_Menu();
+    TelaMenuAdmin menu = new TelaMenuAdmin();
     menu.setVisible(true);
     this.dispose();
   }//GEN-LAST:event_btnVoltarActionPerformed
