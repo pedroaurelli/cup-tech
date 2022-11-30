@@ -4,7 +4,7 @@
  */
 package Telas;
 
-import DAO.Time_DAO;
+import DAO.TimeDAO;
 import Model.Time;
 import javax.swing.JOptionPane;
 
@@ -20,7 +20,7 @@ public class TelaEditarTime extends javax.swing.JFrame {
   public TelaEditarTime (int id) {
     try {
       initComponents();
-      Time_DAO timeDAO = new Time_DAO();
+      TimeDAO timeDAO = new TimeDAO();
       Time timeResult = timeDAO.getTimeById(id);
       this.labelIdTime.setText(timeResult.getId().toString());
       this.inputNomeTime.setText(timeResult.getNome());
@@ -120,7 +120,7 @@ public class TelaEditarTime extends javax.swing.JFrame {
 
   private void btnAtualizarTimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarTimeActionPerformed
     // TODO add your handling code here:
-    Time_DAO timeDAO = new Time_DAO();
+    TimeDAO timeDAO = new TimeDAO();
     String nomeTime = inputNomeTime.getText();
     
     try {

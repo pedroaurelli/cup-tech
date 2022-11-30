@@ -4,7 +4,7 @@
  */
 package Telas;
 
-import DAO.Usuario_DAO;
+import DAO.UsuarioDAO;
 import Model.Usuario;
 import javax.swing.JOptionPane;
 
@@ -139,7 +139,7 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
     
     try {
       Usuario usuario = new Usuario(nome, senha);
-      Usuario_DAO usuarioDAO = new Usuario_DAO();
+      UsuarioDAO usuarioDAO = new UsuarioDAO();
       
       usuarioDAO.cadastrar(usuario);
       

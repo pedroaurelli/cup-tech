@@ -4,7 +4,7 @@
  */
 package Telas;
 
-import DAO.Time_DAO;
+import DAO.TimeDAO;
 import javax.swing.JOptionPane;
 
 public class TelaMenuAdmin extends javax.swing.JFrame {

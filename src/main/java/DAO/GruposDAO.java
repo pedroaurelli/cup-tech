@@ -14,7 +14,7 @@ import java.sql.ResultSet;
  *
  * @author zpeed
  */
-public class Grupos_DAO {
+public class GruposDAO {
   public void existe(Grupo grupo) throws Exception {
     String sql = "INSERT INTO grupos (id_time, grupo) VALUES (?, ?)";
     

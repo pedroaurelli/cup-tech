@@ -15,7 +15,7 @@ import java.util.ArrayList;
  *
  * @author zpeed
  */
-public class Time_DAO {
+public class TimeDAO {
   public boolean existe(Time time) throws Exception {
     String sql = "SELECT * FROM time WHERE nome = ?";
     

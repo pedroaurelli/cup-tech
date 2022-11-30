@@ -11,7 +11,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class Usuario_DAO {
+public class UsuarioDAO {
 
     public boolean existe(Usuario usuario) throws Exception {
         String sql = "SELECT * FROM usuario WHERE nome = ? AND senha = ?";

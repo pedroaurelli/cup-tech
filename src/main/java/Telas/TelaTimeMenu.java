@@ -4,7 +4,7 @@
  */
 package Telas;
 
-import DAO.Time_DAO;
+import DAO.TimeDAO;
 import Model.Time;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -143,7 +143,7 @@ public class TelaTimeMenu extends javax.swing.JFrame {
 
   private void btnListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarActionPerformed
     // TODO add your handling code here:
-    Time_DAO timeDAO = new Time_DAO();
+    TimeDAO timeDAO = new TimeDAO();
     
     try {
       ArrayList<Time> times = timeDAO.listar();
@@ -187,7 +187,7 @@ public class TelaTimeMenu extends javax.swing.JFrame {
     int linha = this.tabelaDefault.getSelectedRow();
     int id = Integer.parseInt(tabelaDefault.getValueAt(linha, 0).toString());
     
-    Time_DAO timeDAO = new Time_DAO();
+    TimeDAO timeDAO = new TimeDAO();
     
     try {
       timeDAO.deletarTimeById(id);

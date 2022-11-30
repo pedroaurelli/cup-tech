@@ -4,7 +4,7 @@
  */
 package Telas;
 
-import DAO.Time_DAO;
+import DAO.TimeDAO;
 import Model.Time;
 import javax.swing.JOptionPane;
 
@@ -117,7 +117,7 @@ public class TelaCadastroTime extends javax.swing.JFrame {
     
     try {
       Time novoTime = new Time (time, sigla, 0);
-      Time_DAO timeDao = new Time_DAO();
+      TimeDAO timeDao = new TimeDAO();
       
       timeDao.cadastrar(novoTime);
       JOptionPane.showMessageDialog(null, "Time cadastrado com sucesso!");

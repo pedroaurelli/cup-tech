@@ -4,7 +4,7 @@
  */
 package Telas;
 
-import DAO.Usuario_DAO;
+import DAO.UsuarioDAO;
 import Model.Usuario;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -120,7 +120,7 @@ public class TelaLogin extends javax.swing.JFrame {
 
         try {
             Usuario usuario = new Usuario(login, senha);
-            Usuario_DAO dao = new Usuario_DAO();
+            UsuarioDAO dao = new UsuarioDAO();
             if (dao.existe(usuario)) {
               
                 Boolean isAdmin = dao.isAdmin(usuario);
