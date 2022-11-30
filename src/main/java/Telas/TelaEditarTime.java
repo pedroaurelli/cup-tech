@@ -6,6 +6,7 @@ package Telas;
 
 import DAO.Time_DAO;
 import Model.Time;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,11 +18,20 @@ public class TelaEditarTime extends javax.swing.JFrame {
    * Creates new form TelaEditarTime
    */
   public TelaEditarTime (int id) {
-    initComponents();
-    idTime = id;
-    Time_DAO timeDAO = new Time_DAO();
-    Time timeResult = timeDAO.getTimeById(id);
-    this.nomeTime.setText(timeResult.getNome());
+    try {
+      initComponents();
+      Time_DAO timeDAO = new Time_DAO();
+      Time timeResult = timeDAO.getTimeById(id);
+      this.labelIdTime.setText(timeResult.getId().toString());
+      this.inputNomeTime.setText(timeResult.getNome());
+    }
+    catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+
+  private TelaEditarTime () {
+    throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
   }
 
   /**
@@ -34,21 +44,27 @@ public class TelaEditarTime extends javax.swing.JFrame {
   private void initComponents() {
 
     jPanel1 = new javax.swing.JPanel();
-    nomeTime = new javax.swing.JTextField();
+    inputNomeTime = new javax.swing.JTextField();
     jLabel1 = new javax.swing.JLabel();
-    jButton1 = new javax.swing.JButton();
+    btnAtualizarTime = new javax.swing.JButton();
+    labelIdTime = new javax.swing.JLabel();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-    nomeTime.addActionListener(new java.awt.event.ActionListener() {
+    inputNomeTime.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        nomeTimeActionPerformed(evt);
+        inputNomeTimeActionPerformed(evt);
       }
     });
 
     jLabel1.setText("Nome do time");
 
-    jButton1.setText("Atualizar time");
+    btnAtualizarTime.setText("Atualizar time");
+    btnAtualizarTime.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnAtualizarTimeActionPerformed(evt);
+      }
+    });
 
     javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
     jPanel1.setLayout(jPanel1Layout);
@@ -56,21 +72,25 @@ public class TelaEditarTime extends javax.swing.JFrame {
       jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jPanel1Layout.createSequentialGroup()
         .addGap(43, 43, 43)
-        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-          .addComponent(jLabel1)
-          .addComponent(nomeTime)
-          .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(labelIdTime)
+          .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+            .addComponent(jLabel1)
+            .addComponent(inputNomeTime)
+            .addComponent(btnAtualizarTime, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)))
         .addContainerGap(53, Short.MAX_VALUE))
     );
     jPanel1Layout.setVerticalGroup(
       jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jPanel1Layout.createSequentialGroup()
-        .addGap(43, 43, 43)
+        .addGap(15, 15, 15)
+        .addComponent(labelIdTime)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
         .addComponent(jLabel1)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addComponent(nomeTime, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addComponent(inputNomeTime, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(30, 30, 30)
-        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addComponent(btnAtualizarTime, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addContainerGap(60, Short.MAX_VALUE))
     );
 
@@ -88,15 +108,29 @@ public class TelaEditarTime extends javax.swing.JFrame {
       .addGroup(layout.createSequentialGroup()
         .addGap(24, 24, 24)
         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(36, Short.MAX_VALUE))
+        .addContainerGap(52, Short.MAX_VALUE))
     );
 
     pack();
   }// </editor-fold>//GEN-END:initComponents
 
-  private void nomeTimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTimeActionPerformed
+  private void inputNomeTimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputNomeTimeActionPerformed
     // TODO add your handling code here:
-  }//GEN-LAST:event_nomeTimeActionPerformed
+  }//GEN-LAST:event_inputNomeTimeActionPerformed
+
+  private void btnAtualizarTimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarTimeActionPerformed
+    // TODO add your handling code here:
+    Time_DAO timeDAO = new Time_DAO();
+    String nomeTime = inputNomeTime.getText();
+    
+    try {
+      timeDAO.atualizarTimeById(Integer.parseInt(this.labelIdTime.getText()), nomeTime );
+      JOptionPane.showMessageDialog(null, "Time atualizado com sucesso!");
+      this.dispose();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }//GEN-LAST:event_btnAtualizarTimeActionPerformed
 
   /**
    * @param args the command line arguments
@@ -138,9 +172,10 @@ public class TelaEditarTime extends javax.swing.JFrame {
   }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
-  private javax.swing.JButton jButton1;
+  private javax.swing.JButton btnAtualizarTime;
+  private javax.swing.JTextField inputNomeTime;
   private javax.swing.JLabel jLabel1;
   private javax.swing.JPanel jPanel1;
-  private javax.swing.JTextField nomeTime;
+  private javax.swing.JLabel labelIdTime;
   // End of variables declaration//GEN-END:variables
 }

@@ -26,6 +26,7 @@ public class Time_DAO {
       }
     }
   }
+  
   public void cadastrar (Time time) throws Exception {
     if (!this.estaCheio()) {
       String sql = "INSERT INTO time (nome, sigla) VALUES ( ? , ? )";
@@ -81,6 +82,7 @@ public class Time_DAO {
     try ( Connection conn = ConexaoDB.obterConexao();  PreparedStatement ps = conn.prepareStatement(sql)) {
       ps.setInt(1, id);
       ResultSet results = ps.executeQuery();
+      results.next();
       
       Integer idResult = results.getInt("id");
       String nome = results.getString("nome");
@@ -88,6 +90,15 @@ public class Time_DAO {
       
       Time time = new Time(nome, sigla, idResult);
       return time;
+    }
+  }
+  
+  public void atualizarTimeById (int id, String nome) throws Exception {
+    String sql = "UPDATE time set nome = ? WHERE id = ?";
+    try ( Connection conn = ConexaoDB.obterConexao();  PreparedStatement ps = conn.prepareStatement(sql)) {
+      ps.setString(1, nome);
+      ps.setInt(2, id);
+      ps.execute();
     }
   }
 }

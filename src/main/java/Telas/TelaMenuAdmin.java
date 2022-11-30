@@ -100,7 +100,10 @@ public class TelaMenuAdmin extends javax.swing.JFrame {
   }// </editor-fold>//GEN-END:initComponents
 
     private void btnListarTimesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarTimesActionPerformed
-        // TODO add your handling code here:
+      // TODO add your handling code here:
+      TelaTimeMenu timeMenu = new TelaTimeMenu();
+      timeMenu.setVisible(true);
+      this.dispose();
     }//GEN-LAST:event_btnListarTimesActionPerformed
 
   private void btnGruposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGruposActionPerformed
