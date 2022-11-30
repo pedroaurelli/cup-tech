@@ -79,7 +79,15 @@ public class TelaTimeMenu extends javax.swing.JFrame {
       new String [] {
         "id", "time", "sigla"
       }
-    ));
+    ) {
+      boolean[] canEdit = new boolean [] {
+        false, false, false
+      };
+
+      public boolean isCellEditable(int rowIndex, int columnIndex) {
+        return canEdit [columnIndex];
+      }
+    });
     jScrollPane1.setViewportView(tabelaDefault);
 
     jButton1.setText("Voltar");

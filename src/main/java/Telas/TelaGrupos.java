@@ -7,9 +7,9 @@ package Telas;
 import DAO.TimeDAO;
 import Model.Time;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.ListModel;
+import java.util.Collections;
+import javax.swing.JButton;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -33,12 +33,147 @@ public class TelaGrupos extends javax.swing.JFrame {
   // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
   private void initComponents() {
 
-    btnVoltar = new javax.swing.JButton();
-    sortearGrupos = new javax.swing.JButton();
+    jPanel1 = new javax.swing.JPanel();
     jScrollPane2 = new javax.swing.JScrollPane();
+    groupCTable = new javax.swing.JTable();
+    jScrollPane3 = new javax.swing.JScrollPane();
+    groupFTable = new javax.swing.JTable();
+    jScrollPane6 = new javax.swing.JScrollPane();
     groupATable = new javax.swing.JTable();
+    jScrollPane4 = new javax.swing.JScrollPane();
+    groupDTable = new javax.swing.JTable();
+    jScrollPane7 = new javax.swing.JScrollPane();
+    groupETable = new javax.swing.JTable();
+    jScrollPane5 = new javax.swing.JScrollPane();
+    groupBTable = new javax.swing.JTable();
+    btnSortearGrupos = new javax.swing.JButton();
+    btnVoltar = new javax.swing.JButton();
+    jScrollPane8 = new javax.swing.JScrollPane();
+    groupHTable = new javax.swing.JTable();
+    jScrollPane9 = new javax.swing.JScrollPane();
+    groupGTable = new javax.swing.JTable();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+    addContainerListener(new java.awt.event.ContainerAdapter() {
+      public void componentAdded(java.awt.event.ContainerEvent evt) {
+        formComponentAdded(evt);
+      }
+    });
+
+    groupCTable.setModel(new javax.swing.table.DefaultTableModel(
+      new Object [][] {
+
+      },
+      new String [] {
+        "Grupo C"
+      }
+    ) {
+      boolean[] canEdit = new boolean [] {
+        false
+      };
+
+      public boolean isCellEditable(int rowIndex, int columnIndex) {
+        return canEdit [columnIndex];
+      }
+    });
+    jScrollPane2.setViewportView(groupCTable);
+
+    groupFTable.setModel(new javax.swing.table.DefaultTableModel(
+      new Object [][] {
+
+      },
+      new String [] {
+        "Grupo F"
+      }
+    ) {
+      boolean[] canEdit = new boolean [] {
+        false
+      };
+
+      public boolean isCellEditable(int rowIndex, int columnIndex) {
+        return canEdit [columnIndex];
+      }
+    });
+    jScrollPane3.setViewportView(groupFTable);
+
+    groupATable.setModel(new javax.swing.table.DefaultTableModel(
+      new Object [][] {
+
+      },
+      new String [] {
+        "Grupo A"
+      }
+    ) {
+      boolean[] canEdit = new boolean [] {
+        false
+      };
+
+      public boolean isCellEditable(int rowIndex, int columnIndex) {
+        return canEdit [columnIndex];
+      }
+    });
+    jScrollPane6.setViewportView(groupATable);
+
+    groupDTable.setModel(new javax.swing.table.DefaultTableModel(
+      new Object [][] {
+
+      },
+      new String [] {
+        "Grupo D"
+      }
+    ) {
+      boolean[] canEdit = new boolean [] {
+        false
+      };
+
+      public boolean isCellEditable(int rowIndex, int columnIndex) {
+        return canEdit [columnIndex];
+      }
+    });
+    jScrollPane4.setViewportView(groupDTable);
+
+    groupETable.setModel(new javax.swing.table.DefaultTableModel(
+      new Object [][] {
+
+      },
+      new String [] {
+        "Grupo E"
+      }
+    ) {
+      boolean[] canEdit = new boolean [] {
+        false
+      };
+
+      public boolean isCellEditable(int rowIndex, int columnIndex) {
+        return canEdit [columnIndex];
+      }
+    });
+    jScrollPane7.setViewportView(groupETable);
+
+    groupBTable.setModel(new javax.swing.table.DefaultTableModel(
+      new Object [][] {
+
+      },
+      new String [] {
+        "Grupo B"
+      }
+    ) {
+      boolean[] canEdit = new boolean [] {
+        false
+      };
+
+      public boolean isCellEditable(int rowIndex, int columnIndex) {
+        return canEdit [columnIndex];
+      }
+    });
+    jScrollPane5.setViewportView(groupBTable);
+
+    btnSortearGrupos.setText("Sortear grupos");
+    btnSortearGrupos.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnSortearGruposActionPerformed(evt);
+      }
+    });
 
     btnVoltar.setText("Voltar");
     btnVoltar.addActionListener(new java.awt.event.ActionListener() {
@@ -47,49 +182,112 @@ public class TelaGrupos extends javax.swing.JFrame {
       }
     });
 
-    sortearGrupos.setText("Sortear grupos");
-    sortearGrupos.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        sortearGruposActionPerformed(evt);
-      }
-    });
-
-    groupATable.setModel(new javax.swing.table.DefaultTableModel(
+    groupHTable.setModel(new javax.swing.table.DefaultTableModel(
       new Object [][] {
 
       },
       new String [] {
-        "Title 1"
+        "Grupo H"
       }
-    ));
-    jScrollPane2.setViewportView(groupATable);
+    ) {
+      boolean[] canEdit = new boolean [] {
+        false
+      };
+
+      public boolean isCellEditable(int rowIndex, int columnIndex) {
+        return canEdit [columnIndex];
+      }
+    });
+    jScrollPane8.setViewportView(groupHTable);
+
+    groupGTable.setModel(new javax.swing.table.DefaultTableModel(
+      new Object [][] {
+
+      },
+      new String [] {
+        "Grupo G"
+      }
+    ) {
+      boolean[] canEdit = new boolean [] {
+        false
+      };
+
+      public boolean isCellEditable(int rowIndex, int columnIndex) {
+        return canEdit [columnIndex];
+      }
+    });
+    jScrollPane9.setViewportView(groupGTable);
+
+    javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+    jPanel1.setLayout(jPanel1Layout);
+    jPanel1Layout.setHorizontalGroup(
+      jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(jPanel1Layout.createSequentialGroup()
+        .addGap(21, 21, 21)
+        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+              .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+              .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGap(18, 18, 18)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+              .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addContainerGap(18, Short.MAX_VALUE))
+          .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGap(13, 13, 13)
+            .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnSortearGrupos, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(20, 20, 20))))
+    );
+    jPanel1Layout.setVerticalGroup(
+      jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(jPanel1Layout.createSequentialGroup()
+        .addGap(56, 56, 56)
+        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+          .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addGap(18, 18, 18)
+        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(btnSortearGrupos, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addGap(18, 18, 18))
+    );
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
     layout.setHorizontalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
-        .addGap(22, 22, 22)
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addGroup(layout.createSequentialGroup()
-            .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(497, 497, 497)
-            .addComponent(sortearGrupos, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        .addContainerGap(16, Short.MAX_VALUE))
+        .addGap(80, 80, 80)
+        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap(74, Short.MAX_VALUE))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(layout.createSequentialGroup()
-        .addGap(17, 17, 17)
-        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 262, Short.MAX_VALUE)
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-          .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addGroup(layout.createSequentialGroup()
-            .addComponent(sortearGrupos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGap(4, 4, 4)))
-        .addGap(53, 53, 53))
+      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+        .addContainerGap(38, Short.MAX_VALUE)
+        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addGap(35, 35, 35))
     );
 
     pack();
@@ -102,7 +300,7 @@ public class TelaGrupos extends javax.swing.JFrame {
     this.dispose();
   }//GEN-LAST:event_btnVoltarActionPerformed
 
-  private void sortearGruposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortearGruposActionPerformed
+  private void btnSortearGruposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSortearGruposActionPerformed
     try {
       // TODO add your handling code here:
       TimeDAO timeDAO = new TimeDAO();
@@ -110,9 +308,22 @@ public class TelaGrupos extends javax.swing.JFrame {
       ArrayList<Time> timesResult = timeDAO.listar();
       ArrayList<String> timesArr = new ArrayList();
       
+      DefaultTableModel tabela = (DefaultTableModel) groupATable.getModel();
+      tabela.setRowCount(4);
+      
+      
       for (int i = 0; i < timesResult.size(); i++) {
         String time = timesResult.get(i).getNome();
         timesArr.add(time);
+      }
+      
+      Collections.shuffle(timesArr);
+      
+      for (int h = 0; h < timesResult.size(); h++) {
+        String [] linha = {
+          timesArr.get(h)
+        };
+        tabela.addRow(linha);
       }
       
       System.out.println(timesArr);
@@ -121,7 +332,11 @@ public class TelaGrupos extends javax.swing.JFrame {
       ex.printStackTrace();
     }
     
-  }//GEN-LAST:event_sortearGruposActionPerformed
+  }//GEN-LAST:event_btnSortearGruposActionPerformed
+
+  private void formComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_formComponentAdded
+    // TODO add your handling code here:
+  }//GEN-LAST:event_formComponentAdded
 
   /**
    * @param args the command line arguments
@@ -163,9 +378,24 @@ public class TelaGrupos extends javax.swing.JFrame {
   }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
+  private javax.swing.JButton btnSortearGrupos;
   private javax.swing.JButton btnVoltar;
   private javax.swing.JTable groupATable;
+  private javax.swing.JTable groupBTable;
+  private javax.swing.JTable groupCTable;
+  private javax.swing.JTable groupDTable;
+  private javax.swing.JTable groupETable;
+  private javax.swing.JTable groupFTable;
+  private javax.swing.JTable groupGTable;
+  private javax.swing.JTable groupHTable;
+  private javax.swing.JPanel jPanel1;
   private javax.swing.JScrollPane jScrollPane2;
-  private javax.swing.JButton sortearGrupos;
+  private javax.swing.JScrollPane jScrollPane3;
+  private javax.swing.JScrollPane jScrollPane4;
+  private javax.swing.JScrollPane jScrollPane5;
+  private javax.swing.JScrollPane jScrollPane6;
+  private javax.swing.JScrollPane jScrollPane7;
+  private javax.swing.JScrollPane jScrollPane8;
+  private javax.swing.JScrollPane jScrollPane9;
   // End of variables declaration//GEN-END:variables
 }

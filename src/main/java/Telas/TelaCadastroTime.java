@@ -121,6 +121,7 @@ public class TelaCadastroTime extends javax.swing.JFrame {
       
       timeDao.cadastrar(novoTime);
       JOptionPane.showMessageDialog(null, "Time cadastrado com sucesso!");
+      this.dispose();
               
     } catch (Exception e) {
       JOptionPane.showMessageDialog(null, "Erro ao cadastrar");
