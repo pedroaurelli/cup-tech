@@ -31,9 +31,28 @@ public class Time_DAO {
     try ( Connection conn = ConexaoDB.obterConexao();  PreparedStatement ps = conn.prepareStatement(sql)) {
       ps.setString(1, time.getNome());
       ps.setString(2, time.getSigla());
-      try ( ResultSet rs = ps.executeQuery()) {
-        rs.next();
+      ps.execute();
+    }
+  }
+  
+  public String listar () throws Exception {
+    String sql = "SELECT nome, sigla FROM time";
+    
+    try (Connection conn = ConexaoDB.obterConexao(); PreparedStatement ps = conn.prepareStatement(sql)) {
+      ResultSet results = ps.executeQuery();
+      String msg = "";
+      
+      while (results.next()) {
+        String nome = results.getString("nome");
+        String sigla = results.getString("sigla");
+
+        msg += nome + " - " + sigla + "\n";
       }
+      
+      return msg;
+    } catch (Exception e) {
+      e.printStackTrace();
+      return "Erro";
     }
   }
 }

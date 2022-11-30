@@ -4,6 +4,9 @@
  */
 package Telas;
 
+import DAO.Time_DAO;
+import javax.swing.JOptionPane;
+
 public class Tela_Menu extends javax.swing.JFrame {
 
     /**
@@ -114,6 +117,15 @@ public class Tela_Menu extends javax.swing.JFrame {
 
     private void btnListarTimesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarTimesActionPerformed
         // TODO add your handling code here:
+      try {
+      Time_DAO timeDao = new Time_DAO();
+      String times = timeDao.listar();
+
+      JOptionPane.showMessageDialog(null, times);
+      } catch (Exception e) {
+        
+      JOptionPane.showMessageDialog(null, "Erro ao listar");
+      }
     }//GEN-LAST:event_btnListarTimesActionPerformed
 
     private void btnCadastroTimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastroTimeActionPerformed

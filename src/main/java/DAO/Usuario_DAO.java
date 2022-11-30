@@ -10,6 +10,7 @@ import App.ConexaoDB;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Calendar;
 
 public class Usuario_DAO {
 
@@ -31,6 +32,16 @@ public class Usuario_DAO {
           try ( ResultSet rs = ps.executeQuery()) {
               return rs.next();
           }
+      }
+    }
+    
+    public void cadastrar (Usuario usuario) throws Exception {
+      String sql = "INSERT INTO usuario (nome, senha) VALUES ( ? , ? )";
+
+      try ( Connection conn = ConexaoDB.obterConexao();  PreparedStatement ps = conn.prepareStatement(sql)) {
+        ps.setString(1, usuario.getNome());
+        ps.setString(2, usuario.getSenha());
+        ps.execute();
       }
     }
 }

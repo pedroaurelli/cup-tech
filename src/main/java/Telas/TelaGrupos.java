@@ -43,7 +43,7 @@ public class TelaGrupos extends javax.swing.JFrame {
     jPanel8 = new javax.swing.JPanel();
     jLabel8 = new javax.swing.JLabel();
     btnVoltar = new javax.swing.JButton();
-    cadastrarGrupo = new javax.swing.JButton();
+    sortearGrupos = new javax.swing.JButton();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -230,10 +230,10 @@ public class TelaGrupos extends javax.swing.JFrame {
       }
     });
 
-    cadastrarGrupo.setText("Cadastrar grupo");
-    cadastrarGrupo.addActionListener(new java.awt.event.ActionListener() {
+    sortearGrupos.setText("Sortear grupos");
+    sortearGrupos.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        cadastrarGrupoActionPerformed(evt);
+        sortearGruposActionPerformed(evt);
       }
     });
 
@@ -263,7 +263,7 @@ public class TelaGrupos extends javax.swing.JFrame {
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
           .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
           .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-          .addComponent(cadastrarGrupo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addComponent(sortearGrupos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addContainerGap(16, Short.MAX_VALUE))
     );
     layout.setVerticalGroup(
@@ -285,7 +285,7 @@ public class TelaGrupos extends javax.swing.JFrame {
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
           .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addGroup(layout.createSequentialGroup()
-            .addComponent(cadastrarGrupo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(sortearGrupos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGap(4, 4, 4)))
         .addGap(53, 53, 53))
     );
@@ -300,9 +300,9 @@ public class TelaGrupos extends javax.swing.JFrame {
     this.dispose();
   }//GEN-LAST:event_btnVoltarActionPerformed
 
-  private void cadastrarGrupoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarGrupoActionPerformed
+  private void sortearGruposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortearGruposActionPerformed
     // TODO add your handling code here:
-  }//GEN-LAST:event_cadastrarGrupoActionPerformed
+  }//GEN-LAST:event_sortearGruposActionPerformed
 
   /**
    * @param args the command line arguments
@@ -345,7 +345,6 @@ public class TelaGrupos extends javax.swing.JFrame {
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JButton btnVoltar;
-  private javax.swing.JButton cadastrarGrupo;
   private javax.swing.JLabel jLabel1;
   private javax.swing.JLabel jLabel2;
   private javax.swing.JLabel jLabel3;
@@ -362,5 +361,6 @@ public class TelaGrupos extends javax.swing.JFrame {
   private javax.swing.JPanel jPanel6;
   private javax.swing.JPanel jPanel7;
   private javax.swing.JPanel jPanel8;
+  private javax.swing.JButton sortearGrupos;
   // End of variables declaration//GEN-END:variables
 }
