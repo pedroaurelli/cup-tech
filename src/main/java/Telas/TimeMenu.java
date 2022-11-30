@@ -57,6 +57,11 @@ public class TimeMenu extends javax.swing.JFrame {
     });
 
     btnEditar.setText("Editar");
+    btnEditar.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnEditarActionPerformed(evt);
+      }
+    });
 
     btnExcluir.setText("Excluir");
 
@@ -153,6 +158,13 @@ public class TimeMenu extends javax.swing.JFrame {
     TelaCadastroTime cadastro = new TelaCadastroTime();
     cadastro.setVisible(true);
   }//GEN-LAST:event_btnCriarTimeActionPerformed
+
+  private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+    // TODO add your handling code here:
+    int linha = this.tabelaDefault.getSelectedRow();
+    int id = Integer.parseInt(tabelaDefault.getValueAt(linha, 0).toString());
+    System.out.println(id);
+  }//GEN-LAST:event_btnEditarActionPerformed
 
   /**
    * @param args the command line arguments

@@ -75,4 +75,19 @@ public class Time_DAO {
       return false;
     }
   }
+  
+  public Time getTimeById (int id) throws Exception {
+    String sql = "SELECT * from time WHERE id = ? ";
+    try ( Connection conn = ConexaoDB.obterConexao();  PreparedStatement ps = conn.prepareStatement(sql)) {
+      ps.setInt(1, id);
+      ResultSet results = ps.executeQuery();
+      
+      Integer idResult = results.getInt("id");
+      String nome = results.getString("nome");
+      String sigla = results.getString("sigla");
+      
+      Time time = new Time(nome, sigla, idResult);
+      return time;
+    }
+  }
 }
