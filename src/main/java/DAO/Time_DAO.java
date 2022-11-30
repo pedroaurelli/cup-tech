@@ -101,4 +101,12 @@ public class Time_DAO {
       ps.execute();
     }
   }
+  
+  public void deletarTimeById (int id) throws Exception {
+    String sql = "DELETE FROM time WHERE id = ?";
+    try ( Connection conn = ConexaoDB.obterConexao();  PreparedStatement ps = conn.prepareStatement(sql)) {
+      ps.setInt(1, id);
+      ps.execute();
+    }
+  }
 }
