@@ -129,11 +129,12 @@ public class TelaLogin extends javax.swing.JFrame {
                   TelaMenuAdmin menu = new TelaMenuAdmin();
                   menu.setVisible(true);
                   this.dispose();
+                } else {
+                  TelaMenu menu = new TelaMenu();
+                  menu.setVisible(true);
+                  this.dispose();
                 }
                 
-                TelaMenu menu = new TelaMenu();
-                menu.setVisible(true);
-                this.dispose();
                 
             } else {
               JOptionPane.showMessageDialog(null, "Usuário ou Senha inválidos");

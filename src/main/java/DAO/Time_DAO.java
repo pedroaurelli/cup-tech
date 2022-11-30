@@ -9,6 +9,7 @@ import Model.Time;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 /**
  *
@@ -26,33 +27,52 @@ public class Time_DAO {
     }
   }
   public void cadastrar (Time time) throws Exception {
-    String sql = "INSERT INTO time (nome, sigla) VALUES ( ? , ? )";
-    
-    try ( Connection conn = ConexaoDB.obterConexao();  PreparedStatement ps = conn.prepareStatement(sql)) {
-      ps.setString(1, time.getNome());
-      ps.setString(2, time.getSigla());
-      ps.execute();
+    if (!this.estaCheio()) {
+      String sql = "INSERT INTO time (nome, sigla) VALUES ( ? , ? )";
+
+      try ( Connection conn = ConexaoDB.obterConexao();  PreparedStatement ps = conn.prepareStatement(sql)) {
+        ps.setString(1, time.getNome());
+        ps.setString(2, time.getSigla());
+        ps.execute();
+      }
     }
   }
   
-  public String listar () throws Exception {
-    String sql = "SELECT nome, sigla FROM time";
+  public ArrayList<Time> listar () throws Exception {
+    String sql = "SELECT nome, sigla, id FROM time";
     
     try (Connection conn = ConexaoDB.obterConexao(); PreparedStatement ps = conn.prepareStatement(sql)) {
       ResultSet results = ps.executeQuery();
-      String msg = "";
+      
+      ArrayList<Time> arr = new ArrayList();
       
       while (results.next()) {
+        Integer id = results.getInt("id");
         String nome = results.getString("nome");
         String sigla = results.getString("sigla");
-
-        msg += nome + " - " + sigla + "\n";
+        
+        Time novoTime = new Time(nome, sigla, id);
+        
+        arr.add(novoTime);
       }
       
-      return msg;
+      return arr;
+    }
+  }
+  
+  public boolean estaCheio () throws Exception {
+    String sql = "SELECT count(id) from time";
+    
+    try (Connection conn = ConexaoDB.obterConexao(); PreparedStatement ps = conn.prepareStatement(sql)) {
+      ResultSet result = ps.executeQuery();
+      result.next();
+      
+      Integer qntdTimes = result.getInt("count");
+      
+      return qntdTimes >= 32;
     } catch (Exception e) {
       e.printStackTrace();
-      return "Erro";
+      return false;
     }
   }
 }

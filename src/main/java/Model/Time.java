@@ -12,10 +12,16 @@ public class Time {
   
   private String nome;
   private String sigla;
+  private Integer id;
   
-  public Time(String nome, String sigla) {
+  public Time(String nome, String sigla, Integer id) {
     this.nome = nome;
     this.sigla = sigla;
+    this.id = id;
+  }
+  
+  public Integer getId () {
+    return id;
   }
   
   public String getNome() {

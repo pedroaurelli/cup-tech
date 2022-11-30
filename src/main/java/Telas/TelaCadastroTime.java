@@ -39,7 +39,7 @@ public class TelaCadastroTime extends javax.swing.JFrame {
     setTitle("Cup-Tech");
     setBackground(new java.awt.Color(147, 157, 186));
 
-    jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+    jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
     inputNomeTime.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome do time"));
     inputNomeTime.addActionListener(new java.awt.event.ActionListener() {
@@ -68,9 +68,9 @@ public class TelaCadastroTime extends javax.swing.JFrame {
       jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jPanel1Layout.createSequentialGroup()
         .addGap(27, 27, 27)
-        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(inputNomeTime, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+          .addComponent(btnCadastrar, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)
+          .addComponent(inputNomeTime, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)
           .addComponent(btnVoltar))
         .addContainerGap(31, Short.MAX_VALUE))
     );
@@ -93,14 +93,14 @@ public class TelaCadastroTime extends javax.swing.JFrame {
       .addGroup(layout.createSequentialGroup()
         .addGap(23, 23, 23)
         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(22, Short.MAX_VALUE))
+        .addContainerGap(25, Short.MAX_VALUE))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
         .addGap(20, 20, 20)
         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(26, Short.MAX_VALUE))
+        .addContainerGap(38, Short.MAX_VALUE))
     );
 
     pack();
@@ -116,12 +116,12 @@ public class TelaCadastroTime extends javax.swing.JFrame {
     String sigla = time.substring(0, 3).toUpperCase();
     
     try {
-      Time novoTime = new Time (time, sigla);
+      Time novoTime = new Time (time, sigla, 0);
       Time_DAO timeDao = new Time_DAO();
-              
-      timeDao.cadastrar(novoTime);
       
+      timeDao.cadastrar(novoTime);
       JOptionPane.showMessageDialog(null, "Time cadastrado com sucesso!");
+              
     } catch (Exception e) {
       JOptionPane.showMessageDialog(null, "Erro ao cadastrar");
     }

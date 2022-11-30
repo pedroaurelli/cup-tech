@@ -29,26 +29,17 @@ public class TelaMenuAdmin extends javax.swing.JFrame {
 
     jPanel1 = new javax.swing.JPanel();
     btnListarTimes = new javax.swing.JButton();
-    btnCadastroTime = new javax.swing.JButton();
     btnGrupos = new javax.swing.JButton();
     jButton1 = new javax.swing.JButton();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-    jPanel1.setBackground(new java.awt.Color(102, 102, 102));
     jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Cup Tech - Admin "));
 
-    btnListarTimes.setText("Listar times");
+    btnListarTimes.setText("Times");
     btnListarTimes.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         btnListarTimesActionPerformed(evt);
-      }
-    });
-
-    btnCadastroTime.setText("Cadastro de time");
-    btnCadastroTime.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        btnCadastroTimeActionPerformed(evt);
       }
     });
 
@@ -66,31 +57,24 @@ public class TelaMenuAdmin extends javax.swing.JFrame {
     jPanel1Layout.setHorizontalGroup(
       jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jPanel1Layout.createSequentialGroup()
-        .addGap(12, 12, 12)
-        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
-          .addGroup(jPanel1Layout.createSequentialGroup()
-            .addComponent(btnListarTimes, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(12, 12, 12)))
-        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-          .addComponent(btnCadastroTime, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-          .addComponent(btnGrupos, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addContainerGap(24, Short.MAX_VALUE))
+        .addGap(52, 52, 52)
+        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+          .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnGrupos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnListarTimes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+          .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addGap(45, 45, 45))
     );
     jPanel1Layout.setVerticalGroup(
       jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jPanel1Layout.createSequentialGroup()
-        .addGap(102, 102, 102)
-        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-          .addComponent(btnGrupos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-          .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addGap(69, 69, 69)
+        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(18, 18, 18)
-        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-          .addComponent(btnCadastroTime, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-          .addComponent(btnListarTimes, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addContainerGap(145, Short.MAX_VALUE))
+        .addComponent(btnGrupos, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addGap(18, 18, 18)
+        .addComponent(btnListarTimes, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap(98, Short.MAX_VALUE))
     );
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -117,23 +101,7 @@ public class TelaMenuAdmin extends javax.swing.JFrame {
 
     private void btnListarTimesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarTimesActionPerformed
         // TODO add your handling code here:
-      try {
-      Time_DAO timeDao = new Time_DAO();
-      String times = timeDao.listar();
-
-      JOptionPane.showMessageDialog(null, times);
-      } catch (Exception e) {
-        
-      JOptionPane.showMessageDialog(null, "Erro ao listar");
-      }
     }//GEN-LAST:event_btnListarTimesActionPerformed
-
-    private void btnCadastroTimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastroTimeActionPerformed
-      // TODO add your handling code here:
-      TelaCadastroTime cadastro = new TelaCadastroTime();
-      cadastro.setVisible(true);
-      this.dispose();
-    }//GEN-LAST:event_btnCadastroTimeActionPerformed
 
   private void btnGruposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGruposActionPerformed
     // TODO add your handling code here:
@@ -179,7 +147,6 @@ public class TelaMenuAdmin extends javax.swing.JFrame {
     }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
-  private static javax.swing.JButton btnCadastroTime;
   private javax.swing.JButton btnGrupos;
   private static javax.swing.JButton btnListarTimes;
   private javax.swing.JButton jButton1;
