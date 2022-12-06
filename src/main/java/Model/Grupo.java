@@ -11,8 +11,8 @@ package Model;
 public class Grupo {
   private String grupo;
   
-  public Grupo(String grupo) {
-    this.grupo = grupo;
+  public Grupo(String nomeGrupo) {
+    this.grupo = nomeGrupo;
   }
   
   public String getNomeGrupo() {

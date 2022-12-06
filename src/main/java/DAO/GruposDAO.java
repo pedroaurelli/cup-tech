@@ -15,7 +15,7 @@ import java.sql.ResultSet;
  * @author zpeed
  */
 public class GruposDAO {
-  public void existe(Grupo grupo) throws Exception {
+  public void criar(Grupo grupo) throws Exception {
     String sql = "INSERT INTO grupos (id_time, grupo) VALUES (?, ?)";
     
     try ( Connection conn = ConexaoDB.obterConexao();  PreparedStatement ps = conn.prepareStatement(sql)) {
